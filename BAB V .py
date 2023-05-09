@@ -12,9 +12,7 @@ if bs=='y':
     arr.sort()
     print("Angka dari urutan terkecil\t:", arr)
 
-    total = 0
-    for i in arr:
-        total += i
+    total = sum(arr)
     print("Jumlah nilai total array\t:", total)
     print("Rata-rata \t\t\t\t\t:", (total/n))
 
