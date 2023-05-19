@@ -19,12 +19,15 @@ def perkalian_matriks(matriks_1, matriks_2, rows1, cols2, cols1): #fungsi perkal
 
 def lainnya(pilihan,matrix1,matrix2): #fungsi penjumlahan dan pengurangan matriks
     if(pilihan == 1):
-        print(np.add(matrix1, matrix2))
+        print('Hasl penjumlahan matrix :',np.add(matrix1, matrix2))
     elif(pilihan==2):
-        print(np.subtract(matrix1, matrix2))
+        print('Masil pengurangan matrix :',np.subtract(matrix1, matrix2))
+    else:
+        print('Determinant matrix pertama :',np.linalg.det(matrix1))
+        print('Determinant matrix kedua :',np.linalg.det(matrix2))
 
 #program utama disini ya
-pilihan = int(input("Silahkan masukkan pilihan operasi matriks :\n1. Penjumlahan matriks\n2. Pengurangan matriks\n3. Perkalian\nPilihan anda :"))
+pilihan = int(input("Silahkan masukkan pilihan operasi matriks :\n1. Penjumlahan matriks\n2. Pengurangan matriks\n3. Perkalian\n4.Determinant\n5.Eigen value Pilihan anda :"))
 baris_1=int(input("Silahkan masukkan panjang baris matriks pertama: "))
 kolom_1=int(input("Silahkan masukkan panjang kolom matriks pertama: "))
 baris_2=int(input("Silahkan masukkan panjang baris matriks kedua: "))
@@ -40,7 +43,7 @@ if (pilihan == 3 and kolom_1==baris_2):
     hasil = perkalian_matriks(matriks_1,matriks_2,baris_1,kolom_2,kolom_1)
     print("Hasil perkalian adalah\n", hasil)
 
-elif ((pilihan == 1 or 2) and baris_1==kolom_1 and baris_2==kolom_2):
+elif ((pilihan == 1 or 2 or 3 or 4) and baris_1==kolom_1 and baris_2==kolom_2):
     lainnya(pilihan,matriks_1,matriks_2)
 
 else:
@@ -49,5 +52,4 @@ exit
 
 
     
-
 
